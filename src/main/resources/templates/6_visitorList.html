@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Our visitors:</h1>
+<ol>
+    <li th:each="visitor : ${visitorList}">
+        <span th:text = "${visitor.getFirstName()} + ' ' + ${visitor.getSurName()}"/>
+        <ul>
+            <li th:text="'year of birth: ' + ${visitor.getYearOfBirth()}">
+            <li th:text="'park code: ' + ${visitor.getThemeParkCode()}">
+            <li> wish list:
+                <ul>
+                    <li th:each="wish : ${visitor.getWishList()}"
+                    th:text="${wish}">
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ol>
+
+<a href="/">Back to home page</a>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/submitnewstaff" >
+    <p>
+        <label for="firstName">First name </label>
+        <input type="text" name="firstName" id="firstName">
+    </p>
+    <p>
+        <label for="surname">Surname </label>
+        <input type="text" name="surname" id="surname">
+    </p>
+    <p>
+        <label for="employedSince">Employed since (dd/MM/yyyy) </label>
+        <input type="date" name="employedSince" id="employedSince">
+    </p>
+    <p>
+        <input type="checkbox" name="workingStudent" value="workingStudent" id="workingStudent">
+        <label for="workingStudent">working student?</label>
+    </p>
+    <p>
+        <input type="submit" name="submit" value="Confirm staff member" >
+    </p>
+</form>
+<a href="/">Back to home page</a>
+</body>
+</html>
